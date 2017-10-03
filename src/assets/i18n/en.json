@@ -1,0 +1,27 @@
+{
+  "DOCUMENT_LIST": {
+    "COLUMNS": {
+      "NAME": "Name",
+      "TITLE": "Title",
+      "DESCRIPTION": "Description",
+      "LAST_UPDATED": "Last Updated",
+      "SIZE": "Size",
+      "VERSION": "Version"
+    },
+    "ACTIONS": {
+      "FOLDER": {
+        "COPY": "Copy",
+        "MOVE": "Move",
+        "DELETE": "Delete",
+        "DETAILS": "Details"
+      },
+      "DOCUMENT": {
+        "DOWNLOAD": "Download",
+        "COPY": "Copy",
+        "MOVE": "Move",
+        "DELETE": "Delete",
+        "DETAILS": "Details"
+      }
+    }
+  }
+}
