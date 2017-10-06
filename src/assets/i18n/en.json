@@ -1,27 +1,11 @@
 {
-  "DOCUMENT_LIST": {
+  "PROCDEF_LIST": {
     "COLUMNS": {
+      "ID": "Id",
       "NAME": "Name",
-      "TITLE": "Title",
-      "DESCRIPTION": "Description",
-      "LAST_UPDATED": "Last Updated",
-      "SIZE": "Size",
+      "KEY": "Key",
       "VERSION": "Version"
     },
-    "ACTIONS": {
-      "FOLDER": {
-        "COPY": "Copy",
-        "MOVE": "Move",
-        "DELETE": "Delete",
-        "DETAILS": "Details"
-      },
-      "DOCUMENT": {
-        "DOWNLOAD": "Download",
-        "COPY": "Copy",
-        "MOVE": "Move",
-        "DELETE": "Delete",
-        "DETAILS": "Details"
-      }
-    }
+    "NONE": "There are no process definitions available"
   }
 }

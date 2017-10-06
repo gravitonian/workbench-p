@@ -12,7 +12,11 @@
         "favicon.ico",
         { "glob": "**/*", "input": "../node_modules/ng2-alfresco-core/bundles/assets", "output": "./assets/" },
         { "glob": "**/*", "input": "../node_modules/ng2-alfresco-login/bundles/assets", "output": "./assets/" },
-        { "glob": "**/*", "input": "../node_modules/ng2-activiti-tasklist/bundles/assets", "output": "./assets/" }
+        { "glob": "**/*", "input": "../node_modules/ng2-activiti-tasklist/bundles/assets", "output": "./assets/" },
+        { "glob": "**/*", "input": "../node_modules/ng2-activiti-form/bundles/assets", "output": "./assets/" },
+        { "glob": "**/*", "input": "../node_modules/ng2-alfresco-datatable/bundles/assets", "output": "./assets/" },
+        { "glob": "**/*", "input": "../node_modules/ng2-activiti-processlist/bundles/assets", "output": "./assets/" },
+        { "glob": "**/*", "input": "../node_modules/ng2-activiti-diagram/bundles/assets", "output": "./assets/" }
       ],
       "index": "index.html",
       "main": "main.ts",
@@ -28,7 +32,8 @@
         "../node_modules/ng2-alfresco-core/prebuilt-themes/adf-blue-orange.css"
       ],
       "scripts": [
-        "../node_modules/material-design-lite/material.min.js"
+        "../node_modules/material-design-lite/material.min.js",
+        "../node_modules/raphael/raphael.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

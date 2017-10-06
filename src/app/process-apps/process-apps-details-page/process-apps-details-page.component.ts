@@ -38,7 +38,6 @@ export class ProcessAppsDetailsPageComponent implements OnInit {
   private setupProps(appDef: AppDefinitionRepresentationModel) {
     console.log('setupProps: ', appDef.id);
 
-    // Properties that are always available
     const idProp = new CardViewTextItemModel({label: 'Id:', value: appDef.id, key: 'appId'});
     const defaultAppIidProp = new CardViewTextItemModel({label: 'Default App Id:', value: appDef.defaultAppId, key: 'defaultAppId'});
     const tenantIdProp = new CardViewTextItemModel({label: 'Tenant Id:', value: appDef.tenantId, key: 'tenantId'});
@@ -70,6 +69,11 @@ export class ProcessAppsDetailsPageComponent implements OnInit {
   }
 
   onShowProcDefs($event: Event) {
+    console.log('Navigate to process definitions for app: ', this.appId);
 
+    this.router.navigate(['procdef-list'],
+      {
+      relativeTo: this.activatedRoute
+    });
   }
 }
