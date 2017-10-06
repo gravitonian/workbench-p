@@ -76,4 +76,13 @@ export class ProcessAppsDetailsPageComponent implements OnInit {
       relativeTo: this.activatedRoute
     });
   }
+
+  onStartProcess($event: Event) {
+    console.log('Navigate to start process for app: ', this.appId);
+
+    this.router.navigate(['start-process'],
+      {
+        relativeTo: this.activatedRoute
+      });
+  }
 }

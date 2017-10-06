@@ -59,7 +59,7 @@ import { CoreModule, TRANSLATION_PROVIDER } from 'ng2-alfresco-core';
     CoreModule
   ],
   declarations: [],
-  providers: [
+  providers: [/*
     {
       provide: TRANSLATION_PROVIDER,
       multi: true,
@@ -67,7 +67,7 @@ import { CoreModule, TRANSLATION_PROVIDER } from 'ng2-alfresco-core';
         name: 'app',
         source: 'assets'
       }
-    }
+    }*/
   ],
   exports: [
     MdAutocompleteModule,

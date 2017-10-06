@@ -15,6 +15,7 @@ import { DataTableModule } from 'ng2-alfresco-datatable';
 import { DiagramsModule } from 'ng2-activiti-diagrams';
 
 import { CardViewUpdateService } from 'ng2-alfresco-core';
+import { StartProcessPageComponent } from './start-process-page/start-process-page.component';
 
 @NgModule({
   imports: [
@@ -31,7 +32,7 @@ import { CardViewUpdateService } from 'ng2-alfresco-core';
     DiagramsModule
   ],
   declarations: [ProcessAppsPageComponent, ProcessAppsListPageComponent, ProcessAppsDetailsPageComponent,
-    ProcessDefinitionsListPageComponent, ProcessDefinitionsDetailsPageComponent],
+    ProcessDefinitionsListPageComponent, ProcessDefinitionsDetailsPageComponent, StartProcessPageComponent],
   providers: [CardViewUpdateService] /* Need to set it up as a provider here as there is a bug in CoreModule, it does not import... */
 })
 export class ProcessAppsModule { }

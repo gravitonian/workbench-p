@@ -16,7 +16,7 @@
         { "glob": "**/*", "input": "../node_modules/ng2-activiti-form/bundles/assets", "output": "./assets/" },
         { "glob": "**/*", "input": "../node_modules/ng2-alfresco-datatable/bundles/assets", "output": "./assets/" },
         { "glob": "**/*", "input": "../node_modules/ng2-activiti-processlist/bundles/assets", "output": "./assets/" },
-        { "glob": "**/*", "input": "../node_modules/ng2-activiti-diagram/bundles/assets", "output": "./assets/" }
+        { "glob": "**/*", "input": "../node_modules/ng2-activiti-diagrams/bundles/assets", "output": "./assets/" }
       ],
       "index": "index.html",
       "main": "main.ts",
@@ -39,6 +39,11 @@
       "environments": {
         "dev": "environments/environment.ts",
         "prod": "environments/environment.prod.ts"
+      },
+      "stylePreprocessorOptions": {
+        "includePaths": [
+          "../node_modules/ng2-alfresco-core/styles"
+        ]
       }
     }
   ],
