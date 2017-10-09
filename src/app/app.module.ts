@@ -10,6 +10,8 @@ import { AppLoginRoutingModule } from './app-login/app-login-routing.module';
 import { AppLoginModule } from './app-login/app-login.module';
 import { ProcessAppsModule } from './process-apps/process-apps.module';
 import { ProcessAppsRoutingModule } from './process-apps/process-apps-routing.module';
+import { MyTasksModule } from './my-tasks/my-tasks.module';
+import { MyTasksRoutingModule } from './my-tasks/my-tasks-routing.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { ProcessAppsRoutingModule } from './process-apps/process-apps-routing.mo
     AppLoginModule,
     AppLoginRoutingModule,
     ProcessAppsModule,
-    ProcessAppsRoutingModule
+    ProcessAppsRoutingModule,
+    MyTasksModule,
+    MyTasksRoutingModule
   ],
   providers: [AppMenuService],
   bootstrap: [AppComponent]

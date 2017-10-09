@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
     (MaterialModule to include all is deprecated) */
 import {
   MdAutocompleteModule,
-  MdCoreModule,
+ /* MdCoreModule, - most of the stuff have been moved into @angular/cdk */
   MdButtonModule,
   MdButtonToggleModule,
   MdCardModule,
@@ -28,14 +28,14 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { CoreModule, TRANSLATION_PROVIDER } from 'ng2-alfresco-core';
 
-@NgModule({
-  imports: [
+export function modules() {
+  return [
     /** Angular Core */
     CommonModule,
 
     /** Angular Material */
     MdAutocompleteModule,
-    MdCoreModule,
+    /*MdCoreModule,*/
     MdButtonModule,
     MdButtonToggleModule,
     MdCardModule,
@@ -57,7 +57,11 @@ import { CoreModule, TRANSLATION_PROVIDER } from 'ng2-alfresco-core';
 
     /* Alfresco ADF */
     CoreModule
-  ],
+  ];
+}
+
+@NgModule({
+  imports: modules(),
   declarations: [],
   providers: [/*
     {
@@ -69,31 +73,7 @@ import { CoreModule, TRANSLATION_PROVIDER } from 'ng2-alfresco-core';
       }
     }*/
   ],
-  exports: [
-    MdAutocompleteModule,
-    MdCoreModule,
-    MdButtonModule,
-    MdButtonToggleModule,
-    MdCardModule,
-    MdCheckboxModule,
-    MdIconModule,
-    MdInputModule,
-    MdListModule,
-    MdMenuModule,
-    MdProgressSpinnerModule,
-    MdRadioModule,
-    MdRippleModule,
-    MdSelectModule,
-    MdSidenavModule,
-    MdSlideToggleModule,
-    MdSnackBarModule,
-    MdToolbarModule,
-    MdTabsModule,
-    FlexLayoutModule,
-
-    /* Alfresco ADF */
-    CoreModule
-  ]
+  exports: modules()
 })
 export class AppCommonModule { }
 

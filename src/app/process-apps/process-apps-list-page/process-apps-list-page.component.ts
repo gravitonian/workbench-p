@@ -18,7 +18,7 @@ export class ProcessAppsListPageComponent implements OnInit {
   }
 
   onAppClick(appDef: AppDefinitionRepresentationModel) {
-    console.log('App Definition : ', appDef);
+    console.log('Navigating to App Definition : ', appDef);
 
     this.router.navigate(['/process-apps', appDef.id]);
   }
