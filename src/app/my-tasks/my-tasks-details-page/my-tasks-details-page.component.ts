@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 import { TaskListService, TaskDetailsModel } from 'ng2-activiti-tasklist';
-import { LightUserRepresentation } from 'ng2-alfresco-core';
 
 @Component({
   selector: 'app-my-tasks-details-page',
@@ -11,7 +10,6 @@ import { LightUserRepresentation } from 'ng2-alfresco-core';
 })
 export class MyTasksDetailsPageComponent implements OnInit {
   taskDetails: TaskDetailsModel;
-  taskPeople: LightUserRepresentation[] = [];
 
   constructor(private router: Router,
               private activatedRoute: ActivatedRoute,
@@ -24,12 +22,6 @@ export class MyTasksDetailsPageComponent implements OnInit {
     this.taskListService.getTaskDetails(taskId).subscribe(
       (taskDetails: TaskDetailsModel) => {
           this.taskDetails = taskDetails;
-
-        if (this.taskDetails && this.taskDetails.involvedPeople) {
-          this.taskDetails.involvedPeople.forEach((user) => {
-            this.taskPeople.push(new LightUserRepresentation(user));
-          });
-        }
       },
       (error) => {
         console.log('Error: ', error);
