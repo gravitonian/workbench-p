@@ -63,7 +63,7 @@ export function modules() {
 @NgModule({
   imports: modules(),
   declarations: [],
-  providers: [/*
+  providers: [
     {
       provide: TRANSLATION_PROVIDER,
       multi: true,
@@ -71,7 +71,7 @@ export function modules() {
         name: 'app',
         source: 'assets'
       }
-    }*/
+    }
   ],
   exports: modules()
 })

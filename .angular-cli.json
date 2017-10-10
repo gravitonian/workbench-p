@@ -28,7 +28,6 @@
       "styles": [
         "styles.css",
         "../node_modules/material-design-lite/dist/material.orange-blue.min.css",
-        "../node_modules/material-design-icons/iconfont/material-icons.css",
         "../node_modules/ng2-alfresco-core/prebuilt-themes/adf-blue-orange.css"
       ],
       "scripts": [
