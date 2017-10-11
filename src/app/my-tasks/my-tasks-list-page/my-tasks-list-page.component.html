@@ -9,10 +9,10 @@
   [filtersAppId]="processAppsFilter"
   (appClick)="onAppClick($event)">
 </adf-apps>
-<md-divider></md-divider>
 <div class="margin10" *ngIf="appName">
+  <md-divider></md-divider>
   Show tasks that are:
-  <md-radio-group (change)="onTodoFilter($event.value)" class="margin10">
+  <md-radio-group (change)="onSelectTaskType($event.value)" class="margin10">
     <md-radio-button value="openAssigned" checked="true">Open (Assigned)</md-radio-button>
     <md-radio-button value="openPooled">Open (Pooled)</md-radio-button>
     <md-radio-button value="completed">Completed</md-radio-button>
@@ -26,9 +26,10 @@
                   [assignment]="taskAssignment"
                   (rowClick)="onTaskClick($event)">
       <data-columns>
-        <data-column key="id" title="Id"></data-column>
+        <data-column key="processInstanceId" title="Process Id"></data-column>
+        <data-column key="id" title="Task Id"></data-column>
         <data-column key="name" title="Name" class="full-width name-column"></data-column>
-        <data-column key="created" title="Created" class="hidden"></data-column>
+        <data-column key="created" title="Created" type="date"></data-column>
       </data-columns>
     </adf-tasklist>
   </md-tab>

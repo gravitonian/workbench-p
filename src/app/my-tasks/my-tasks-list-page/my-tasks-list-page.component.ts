@@ -1,8 +1,7 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { AppDefinitionRepresentationModel, TaskListComponent } from 'ng2-activiti-tasklist';
-import { DataColumn } from 'ng2-alfresco-datatable';
+import { AppDefinitionRepresentationModel } from 'ng2-activiti-tasklist';
 
 @Component({
   selector: 'app-my-tasks-list-page',
@@ -19,9 +18,6 @@ export class MyTasksListPageComponent implements OnInit {
   /* Create a filter that will exclude the Task List App and include only new custom apps */
   processAppsFilter = [ { tenantId: 1 } ];
 
-  @ViewChild(TaskListComponent)
-  taskList;
-
   constructor(private router: Router) {
     this.taskTypeName = 'Open (Assigned)';
     this.taskState = 'active';
@@ -31,8 +27,8 @@ export class MyTasksListPageComponent implements OnInit {
   ngOnInit() {
   }
 
-  onTodoFilter(displayTaskType: string) {
-    console.log('Changed tasks to show : ', displayTaskType);
+  onSelectTaskType(displayTaskType: string) {
+    console.log('Changed task type to show : ', displayTaskType);
 
     if (displayTaskType === 'openAssigned') {
       this.taskTypeName = 'Open (Assigned)';
